@@ -1,0 +1,8 @@
+
+Planned_Expenses/settings.py
+
+__pycache__/
+
+.idea/
+
+db.sqlite3
