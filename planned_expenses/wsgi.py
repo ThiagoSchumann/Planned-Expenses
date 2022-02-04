@@ -1,5 +1,5 @@
 """
-WSGI config for Planned_Expenses project.
+WSGI config for planned_expenses project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Planned_Expenses.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'planned_expenses.settings')
 
 application = get_wsgi_application()
