@@ -1,1 +1,1 @@
-web: gunicorn planned-expenses.wsgi
+web: gunicorn Planned_Expenses.wsgi.application
