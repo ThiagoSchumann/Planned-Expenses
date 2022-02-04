@@ -21,10 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+#SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = 'django-insecure-9^*d0tv^t+@)s*uq*#d&t8t2d$!!*yu03m23h3gxpin6+j*f4f';
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG') == 'True'
+#DEBUG = os.environ.get('DEBUG') == 'True'
+DEBUG = True
 
 ALLOWED_HOSTS = ['https://planned-expenses.herokuapp.com/']
 
@@ -56,7 +58,7 @@ MIDDLEWARE = [
     'auditlog.middleware.AuditlogMiddleware',
 ]
 
-ROOT_URLCONF = 'Planned_Expenses.urls'
+ROOT_URLCONF = 'planned_expenses.urls'
 
 TEMPLATES = [
     {
