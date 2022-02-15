@@ -83,15 +83,29 @@ WSGI_APPLICATION = 'planned_expenses.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+
+
+# Internationalization
+# https://docs.djangoproject.com/en/3.2/topics/i18n/
+
+LANGUAGE_CODE = 'pt-br'
+
+TIME_ZONE = 'America/Sao_Paulo'
+
+USE_I18N = True
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd27660503ciktg',
-        'USER': 'zatxkaeunljynb',
-        'PASSWORD': '56f2543fe0166d2673a2ad4f8d08440c51083df5e244cd4d3dd8ec860d1fffc8',
-        'HOST': 'ec2-35-169-49-157.compute-1.amazonaws.com',
-        'PORT': 5432,
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
 
+
+        #'default': {
+       #     'ENGINE': 'django.db.backends.postgresql',
+       #   'USER': 'zatxkaeunljynb',
+       #     'PASSWORD': '56f2543fe0166d2673a2ad4f8d08440c51083df5e244cd4d3dd8ec860d1fffc8',
+       #     'HOST': 'ec2-35-169-49-157.compute-1.amazonaws.com',
+       #     'PORT': 5432,
     }
 }
 
@@ -113,16 +127,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
-
-# Internationalization
-# https://docs.djangoproject.com/en/3.2/topics/i18n/
-
-LANGUAGE_CODE = 'pt-br'
-
-TIME_ZONE = 'America/Sao_Paulo'
-
-USE_I18N = True
 
 USE_L10N = True
 
