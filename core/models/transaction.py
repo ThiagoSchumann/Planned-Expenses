@@ -12,12 +12,15 @@ class TransactionStatus(models.IntegerChoices):
 
 
 class Transaction(models.Model):
-    expanse_id = models.ForeignKey(Expanse, on_delete=models.SET_NULL)
-    bank_account_id = models.ForeignKey(BankAccount, on_delete=models.SET_NULL)
-    due_date = models.DateField()
-    settlement_date = models.DateField()
-    status = models.IntegerField(default=TransactionStatus.PENDING, choices=TransactionStatus)
-    value = models.FloatField()
+    expanse_id = models.ForeignKey(Expanse, on_delete=models.PROTECT, verbose_name='Despesa')
+    bank_account_id = models.ForeignKey(BankAccount, on_delete=models.PROTECT, verbose_name='Conta Bancária')
+    due_date = models.DateField(verbose_name='Data de Vencimento')
+    settlement_date = models.DateField(verbose_name='Data de Liquidação')
+    status = models.IntegerField(default=TransactionStatus.PENDING, choices=TransactionStatus.choices, verbose_name='Situação')
+    value = models.FloatField(verbose_name='Valor')
+
+    class Meta:
+        verbose_name = 'Transação'
 
 
 auditlog.register(Transaction)

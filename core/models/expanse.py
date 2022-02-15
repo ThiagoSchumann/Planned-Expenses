@@ -13,9 +13,13 @@ class Periodicity(models.IntegerChoices):
 
 
 class Expanse(models.Model):
-    next_occurrence = models.DateField()
-    periodicity_occurrence = models.IntegerField(default=Periodicity.ANNUAL, choices=Periodicity.choices)
-    value = models.FloatField()
+    next_occurrence = models.DateField(verbose_name='Próxima Ocorrência')
+    periodicity_occurrence = models.IntegerField(default=Periodicity.ANNUAL, choices=Periodicity.choices, verbose_name='Periodicidade')
+    value = models.FloatField(verbose_name='Valor')
+
+    class Meta:
+        verbose_name = 'Despesa'
+
 
 
 auditlog.register(Expanse)
