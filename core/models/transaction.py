@@ -1,4 +1,3 @@
-from auditlog.registry import auditlog
 from django.db import models
 from core.models import Expanse, BankAccount
 
@@ -22,5 +21,3 @@ class Transaction(models.Model):
     class Meta:
         verbose_name = 'Transação'
 
-
-auditlog.register(Transaction)

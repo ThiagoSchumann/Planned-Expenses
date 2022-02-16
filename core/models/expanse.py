@@ -1,4 +1,3 @@
-from auditlog.registry import auditlog
 from django.db import models
 
 
@@ -19,7 +18,3 @@ class Expanse(models.Model):
 
     class Meta:
         verbose_name = 'Despesa'
-
-
-
-auditlog.register(Expanse)

@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_extensions',
     'core',
-    'auditlog',
+    #'auditlog',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 ]
@@ -55,7 +55,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'auditlog.middleware.AuditlogMiddleware',
+    #'auditlog.middleware.AuditlogMiddleware',
 ]
 
 ROOT_URLCONF = 'planned_expenses.urls'

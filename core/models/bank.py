@@ -1,4 +1,3 @@
-from auditlog.registry import auditlog
 from django.db import models
 
 
@@ -15,8 +14,6 @@ class Bank(models.Model):
         return self.name
 
 
-auditlog.register(Bank)
-
 
 class BankAccount(models.Model):
     bank_id = models.ForeignKey(Bank, on_delete=models.SET_NULL, null=True, blank=False, verbose_name='Banco')
@@ -26,6 +23,3 @@ class BankAccount(models.Model):
     class Meta:
         verbose_name = 'Conta Bancária'
         verbose_name_plural = 'Contas Bancárias'
-
-
-auditlog.register(BankAccount)
