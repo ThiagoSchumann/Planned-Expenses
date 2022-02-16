@@ -12,9 +12,16 @@ class Periodicity(models.IntegerChoices):
 
 
 class Expanse(models.Model):
+    description = models.CharField(max_length=255,
+                                   verbose_name='Descrição')
     next_occurrence = models.DateField(verbose_name='Próxima Ocorrência')
-    periodicity_occurrence = models.IntegerField(default=Periodicity.ANNUAL, choices=Periodicity.choices, verbose_name='Periodicidade')
+    periodicity_occurrence = models.IntegerField(default=Periodicity.ANNUAL,
+                                                 choices=Periodicity.choices,
+                                                 verbose_name='Periodicidade')
     value = models.FloatField(verbose_name='Valor')
 
     class Meta:
         verbose_name = 'Despesa'
+
+    def __str__(self):
+        return self.name
