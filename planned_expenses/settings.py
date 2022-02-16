@@ -95,17 +95,18 @@ TIME_ZONE = 'America/Sao_Paulo'
 USE_I18N = True
 
 DATABASES = {
+    #'default': {
+    #    'ENGINE': 'django.db.backends.sqlite3',
+    #    'NAME': BASE_DIR / 'db.sqlite3',
+
+
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-
-
-        #'default': {
-       #     'ENGINE': 'django.db.backends.postgresql',
-       #   'USER': 'zatxkaeunljynb',
-       #     'PASSWORD': '56f2543fe0166d2673a2ad4f8d08440c51083df5e244cd4d3dd8ec860d1fffc8',
-       #     'HOST': 'ec2-35-169-49-157.compute-1.amazonaws.com',
-       #     'PORT': 5432,
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd27660503ciktg',
+        'USER': 'zatxkaeunljynb',
+        'PASSWORD': '56f2543fe0166d2673a2ad4f8d08440c51083df5e244cd4d3dd8ec860d1fffc8',
+        'HOST': 'ec2-35-169-49-157.compute-1.amazonaws.com',
+        'PORT': 5432,
     }
 }
 
