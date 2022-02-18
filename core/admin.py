@@ -6,6 +6,8 @@ from .models import Expanse, Bank, BankAccount, Transaction
 
 
 AdminSite.site_header = '💰 Planned Expenses 💰'
+AdminSite.site_title = '💰 Planned Expenses 💰'
+AdminSite.index_title = 'Sistema para controle de despesas sazonais'
 
 
 @admin.register(Expanse)
